@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "7c213155-6f86-4dcc-90dc-e5b82b43b1ae",
+		"name": "TOTP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Setup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/totp/setup?mail=lucasgabriel@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"totp",
+						"setup"
+					],
+					"query": [
+						{
+							"key": "mail",
+							"value": "lucasgabriel@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/totp/codes?secret=4ZKQ6EDZDACDVXLQYV5KEHDRQGTQEVOW",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"totp",
+						"codes"
+					],
+					"query": [
+						{
+							"key": "secret",
+							"value": "4ZKQ6EDZDACDVXLQYV5KEHDRQGTQEVOW"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid Code for Secret",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/totp/verify?code=430489&secret=4ZKQ6EDZDACDVXLQYV5KEHDRQGTQEVOW",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"totp",
+						"verify"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "430489"
+						},
+						{
+							"key": "secret",
+							"value": "4ZKQ6EDZDACDVXLQYV5KEHDRQGTQEVOW"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
